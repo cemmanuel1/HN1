@@ -1,25 +1,23 @@
 <div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>Hello, world!</p>
 
-  <%# TODO: 
-  1. If user is not signed in - display "Welcome".
-  2. If user is signed in then  display all users %>
-  <div class="screen">
-    <% if !session[:user_id]%>
-    <%="<h1>"+"Welcome to Chantauthication"+"</h2>"%>  
-    <br>
-    <img class="lock" src="/lock.gif"> </img>
-    <br>
-    <%="Please sign in or create an account"%>  
-    <br>
-    <br>
-
-    <% else %>
-    <h2>All Users:</h2>
-    <% @users.each do |user| %>
-    <%= user.name %><br>
-    <%= user.email %><br>
-    <br>
-    <% end %>
-    <% end %>
-  </div>
+  <table>
+    <tr>
+      <th>File Description</th>
+      <th>File Location</th>
+    </tr>
+    <tr>
+      <td>This view file</td>
+      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The layout file</td>
+      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The current controller</td>
+      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+  </table>
 </div>
