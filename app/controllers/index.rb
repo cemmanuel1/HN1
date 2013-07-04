@@ -3,12 +3,16 @@ get '/' do
   erb :index
 end
 
+post '/' do 
+end
+
 get '/login' do
   erb :login
 end
 
 get '/signup' do
+  erb :sign_up
 end
 
-get '/submit' do
-end
+
+

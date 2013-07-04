@@ -2,14 +2,18 @@
   <a href="/"> <img src="/inquisitivechi.gif" </img> </a>
   <h1>Chi Knews: All the news fit to purrrr </h1>
   <div id="login_links">
-  <a href="/submit">Submit</a> 
-  <a href="/login">Login</a> 
-  <a href="/signup">Sign Up</a>
+  <a href="/submit">Create a post</a> 
+  <form action='/' method='post'>
+  <input value='@username' type="text" name='user[username]' placeholder='enter your username'>
+  <input type="password" name="user[password]" placeholder="enter your password">
+  <button>Log In</button>
+  </form>
+  <a href="/signup">Create Account</a>
 </div>
 </nav>
 
 <div class="posts">
   <%@post.each do |post|%>
-  <p> <%=post.title%> </p>
+  <a href="#"> <%=post.title%> </a>
   <% end %>
 </div>

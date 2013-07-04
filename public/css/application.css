@@ -16,7 +16,6 @@ nav h1 {
   font-size: 15px;
   display: inline-block;
   margin-top: 1em;
-  
 }
 
 #login_links {
@@ -29,4 +28,7 @@ nav h1 {
 nav a {
   padding: 2px;
   text-decoration: none;
+}
+nav form {
+  display: inline-block;
 }
